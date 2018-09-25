@@ -8,7 +8,7 @@ html,body {
 #pagewarp {
 	width: 100%;
 }
-
+/*шапка*/
 header {
 	height: 100px;
 	width: 100%;
@@ -23,46 +23,114 @@ header {
 		height: 100px;
 		overflow: hidden;
 	}
-
+/*лого шапки*/
 		.header_logo {
 			height: 80px;
 			width: 80px;
-			line-height: 100px;
 			margin-top: 10px;
 			float: left;
 		}	
-
+		.header_logo_2 {
+			height: 80px;
+			width: 80px;
+			margin-top: 10px;
+			float: right;
+		}	
+/*загаловок шапки*/
 		.page_name {
-			margin-left: 5%;
-			width: 430px;
-			float: left;
+			text-align: center;
 			line-height: 100px;
+			width: 40%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 			.page_name span {
 				font-family: 'M PLUS 1p', sans-serif;
 				font-size: 28px;
-				padding-top: 10px;
-				padding-bottom: 10px;
-				padding-right: 20px;
-				border-right: 1px solid black;
 			}
 
-		.login_hello {
+#second_header {
+	height: 400px;
+	width: 100%;
+	background-image: url(../img/second_header_bg.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+		.second_header_dark {
+			width: 100%;
+			height: 400px;
+			background-color: rgba(0,0,0,.3);
+		}
+
+				.desc_login {
+					height: 400px;
+					width: 60%;
+					margin-left: 5%;
+					float: left;
+				}
+
+						.first_line_desc_login {
+								font-family: 'M PLUS 1p', sans-serif;
+								font-size: 100px;
+								color: white;
+						}
+
+						.second_line_desc_login {
+								font-family: 'M PLUS 1p', sans-serif;
+								font-size: 32px;
+								color: white;
+						}
+
+						.third_line_desc_login {
+								font-family: 'M PLUS 1p', sans-serif;
+								font-size: 32px;
+								color: white;
+						}
+
+						.fourth_line_desc_login {
+								font-family: 'M PLUS 1p', sans-serif;
+								font-size: 72px;
+								color: white;
+						}
+		.header_line {
+			width: 1px;
+			background-color: white;
+			height: 300px;
 			float: left;
-			margin-left: 20px;
-			line-height: 100px;
+			margin-top: 50px;
 		}
-
-			.login_hello span {
-				font-family: 'M PLUS 1p', sans-serif;
-				font-size: 28px;
-			}
-
 		.login_form {
+			width: 34%;
+			height: 400px;
 			float: right;
-			height: 100px;
-			width: 300px;
-			background: red;
-			line-height: 100px;
 		}
+
+			.login_form_center{
+				height: 300px;
+				width: 65%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 100px;
+			}
+			.main_field {
+				float: left;
+			}
+				.field {
+					line-height: 50px;
+					clear: both;
+					text-align: right;	
+				}
+					.field label {
+						float: left;
+						font-family: 'M PLUS 1p', sans-serif;
+						padding-right: 10px;
+						font-size: 24px;
+						color: white;
+					}
+						.input_text{
+							height: 25px;
+							width: 195px;
+					}
+

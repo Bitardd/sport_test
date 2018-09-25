@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+html,body {
+	margin: 0;
+	padding: 0;
+	background: #F5F5F5;
+}
+
+#pagewarp {
+	width: 100%;
+}
+
+header {
+	height: 100px;
+	width: 100%;
+	background: white;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+	.header {
+		width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+		height: 100px;
+		overflow: hidden;
+	}
+
+		.header_logo {
+			height: 80px;
+			width: 80px;
+			line-height: 100px;
+			margin-top: 10px;
+			float: left;
+		}	
+
+		.page_name {
+			margin-left: 5%;
+			width: 430px;
+			float: left;
+			line-height: 100px;
+		}
+
+			.page_name span {
+				font-family: 'M PLUS 1p', sans-serif;
+				font-size: 28px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-right: 20px;
+				border-right: 1px solid black;
+			}
+
+		.login_hello {
+			float: left;
+			margin-left: 20px;
+			line-height: 100px;
+		}
+
+			.login_hello span {
+				font-family: 'M PLUS 1p', sans-serif;
+				font-size: 28px;
+			}
+
+		.login_form {
+			float: right;
+			height: 100px;
+			width: 300px;
+			background: red;
+			line-height: 100px;
+		}

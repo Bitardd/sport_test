@@ -7,6 +7,11 @@ html,body {
 
 #pagewarp {
 	width: 100%;
+	overflow-x:hidden;
+}
+#section1{
+	width: 100vw;
+	height: 100vh;
 }
 /*шапка*/
 header {
@@ -129,8 +134,44 @@ header {
 						font-size: 24px;
 						color: white;
 					}
-						.input_text{
+
+					.input_text {
 							height: 25px;
-							width: 195px;
+							width: 190px;
 					}
+
+					.login_button {
+						background-color: rgba(0,0,0,0);
+						border: 2px solid white;
+						border-radius: 5px;
+						padding-top: 10px;
+						padding-bottom: 10px;
+						padding-right: 20px;
+						padding-left: 20px;
+						color: white;
+						font-size: 16px;
+						cursor: pointer;
+					}
+
+					.reg_link {
+						margin-right: 5%;
+						color: white;
+						font-family: 'M PLUS 1p', sans-serif;
+					}
+	.header_footer{
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		margin-top: 6%;
+	}
+		.developer_desk {
+			color: gray;
+			font-family: 'M PLUS 1p',sans-serif;
+		}
+#section2 {
+	width: 100vw;
+	height: 100vh;
+	background-color: #D3D3D3;
+}
+						
 

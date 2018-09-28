@@ -12,6 +12,7 @@ html,body {
 #section1{
 	width: 100vw;
 	height: 100vh;
+	background-color: #dcdcdc;
 }
 /*шапка*/
 header {
@@ -171,7 +172,47 @@ header {
 #section2 {
 	width: 100vw;
 	height: 100vh;
-	background-color: #D3D3D3;
+	background-image: url(../img/section2_bg.png);
+	position: relative;
 }
 						
-
+	.content{
+		width: 600px;
+		height: 400px;
+		border: 1px solid black;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+	}
+		.test_block{
+			text-align: center;
+			line-height: 200px;
+			width: 200px;
+			height: 200px;
+			float: left;
+			background-color: red;
+		}
+			.test_block a{
+				display: block;
+			}
+			.test_block a:hover{
+				background-color: rgba(0,0,0,.4);
+			}
+		.sport1{
+			background-color: blue;
+		}
+		.sport2{
+			background-color: green;
+		}
+		.sport3{
+			background-color: gray;
+		}
+		.sport4{
+			background-color: purple;
+		}
+		.sport5{
+			background-color: orange;
+		}
+		.sport6{
+			background-color: yellow;
+		}

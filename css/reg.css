@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+p{
+	font-family: 'M PLUS 1p', sans-serif;
+}
+
+#pagewarp {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #dcdcdc;
+}
+
+.reg_block {
+	position: absolute;
+	background-color: white;
+	box-shadow: 0 0 20px rgba(0,0,0,.3);
+	height: 500px;
+	width: 400px;
+	border-radius: 5px;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+	text-align: center;
+	color: gray;
+	font-family: 'M PLUS 1p', sans-serif;
+}
+
+		.reg_block form{
+			height: 370px;
+			width: 270px;
+			position: absolute;
+			overflow: hidden;
+			margin: auto;
+			top:0; bottom: 0; right: 0; left: 0;
+		}
+
+			.main_field {
+				float: left; 
+			}
+
+				.field {
+					line-height: 60px;
+					clear: both;
+					text-align: right;
+				}	
+
+					.field label{
+						float: left;
+						font-family: 'M PLUS 1p',sans-serif;
+						padding-right: 10px;
+						font-size: 16px;
+					}
+
+					.input_text{
+						width: 180px;
+						height: 20px;
+					}
+
+				.select_block{
+						margin-top: 6%;
+				}
+
+					.select_text {
+						font-size: 14px;
+						width: 180px;
+						float: right;
+					}
+
+					.group_label {
+						float: left;
+						padding-right: 20px;
+					}
+
+				.reg_button_block {
+					margin-top: 20%;
+					float: right;
+				}
+					.reg_button {
+						height: 40px;
+						width: 100px;
+						border: 1px solid gray;
+						border-radius: 2px;
+						color: gray;
+						cursor: pointer;
+					}
+
+					.reg_button:hover{
+						transition: 0.2s;
+						border: 1px solid black;
+						color: black;
+					}
+					.reg_button:not(:hover){
+						transition: 0.2s;
+						border: 1px solid gray;
+						color: gray;
+					}
+.footer {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+}
+
+	.footer_text {
+		height: 50px;
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+		line-height: 50px;
+		text-align: center;
+	}
+
+		.footer_text span {
+			color: gray;
+			font-family: 'M PLUS 1p', sans-serif;
+			font-size: 14px;
+		}

@@ -52,7 +52,7 @@
 										<input class="input_text" type="password" name="pass" id="pass">
 									</div>
 									<div class="field">
-										<a class="reg_link" href="signup.php">Регистрация</a>
+										<a class="reg_link" href="registration.php">Регистрация</a>
 										<input class="login_button" type="submit" name="login_button" value="Вход">
 									</div>
 								</div>

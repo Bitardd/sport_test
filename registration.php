@@ -1,5 +1,27 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<?php
+	require_once 'connect.php';
+
+	$con = mysqli_connect($host, $user, $password, $db) or die ("Ошибка ". mysqli_error($con));
+
+	if (isset($_POST['reg_button'])){
+
+
+		if ((empty($_POST['name'])) or (empty($_POST['surname'])) or (empty($_POST['login'])) or (empty($_POST['password']))){
+
+			$ei = 1;
+
+			} 	elseif (preg_match("/^[а-яА-Я ]+$/i", $_POST['login'])){
+					
+					$en_login = 1;
+
+				}	elseif (strlen($_POST['password']) < 5 ){
+
+					$pass_length = 1;
+				}
+		}
+?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>Регистрация на сайте</title>
@@ -9,7 +31,7 @@
 	<div id="pagewarp">
 		<div class="reg_block">
 			<p>Регистрация</p>
-			<form method="" action="">
+			<form method="POST" action="">
 				<div class="main_field">
 					<div class="field">
 						<label for="name">Имя:</label>
@@ -110,6 +132,15 @@
 					</div>
 					<div class="reg_button_block">
 						<input class="reg_button" type="submit" name="reg_button" value="Регистрация">
+					</div>
+					<div class="error_chek">
+						<?php if ($ei == 1){
+							echo "<span>Не все поля заполнены</span>";
+						} elseif ($en_login == 1) {
+							echo "<span>Некорректный логин</span>";
+						} elseif ($pass_length == 1) {
+							echo "<span>Пароль слишком короткий</span>";
+						} ?>
 					</div>
 				</div>
 			</form>

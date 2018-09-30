@@ -1,6 +1,6 @@
 <?php
 	
-	include 'connect.php'; 						//Подключение бд
+	include 'connect.php'; 					//Подключение бд
 
 	if (isset($_POST['reg_button'])){
 												
@@ -51,10 +51,14 @@
 
 				} else 
 
-					$query = "INSERT INTO userdata (`name`, `surname`, `login`, `password`, `usergroup`) value ('".$username."', '".$usersurname."', '".$userlogin."', '".$userpassword."', '".$usergroup."')";
+					$userpassword = $_POST['password'];
+
+					$query = "INSERT INTO userdata (`name`, `surname`, `login`, `password`, `usergroup`) value ('".$username."', '".$usersurname."', '".$userlogin."', '".md5($userpassword)."', '".$usergroup."')";
 
 					$result = mysqli_query($conn, $query);
 
+					setcookie("username", $username, time() + 3600);
+					setcookie("userlogin", $userlogin, time() + 3600);
 												//Редирект на главную страницу
 					
 					header('Location: index.php');

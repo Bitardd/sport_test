@@ -1,10 +1,12 @@
 <?php
 	
-	include 'connect.php'; 					//Подключение бд
+//Подключение бд	
+	
+	include 'connect.php'; 	
 
 	if (isset($_POST['reg_button'])){
 												
-												// данные с формы
+// данные с формы
 
 			$username = $_POST['name'];
 			$usersurname = $_POST['surname'];
@@ -12,7 +14,7 @@
 			$userpassword = $_POST['password'];
 			$usergroup = $_POST['group'];
 
-												// запрос логина и его проверка на наличие
+// запрос логина и его проверка на наличие
 
 			$query = "SELECT * FROM userdata WHERE login='$userlogin'";
 			$result = mysqli_query($conn, $query);
@@ -22,32 +24,32 @@
 
 				$error_login = 1;
 
-												// проверка цифр в имени и фамилии
+// проверка цифр в имени и фамилии
 
 			}	else{							
 
 			preg_match("/[\d]+/", $username, $er_name);
 			preg_match("/[\d]+/", $usersurname, $er_sname);
 
-												// проверка на пустоту строк
+// проверка на пустоту строк
 
 		if ((empty($username)) or (empty($usersurname)) or (empty($userlogin)) or (empty($userpassword))){
 
 				$ei = 1;
 
-												// проверка на наличие рус букв в логине
+// проверка на наличие рус букв в логине
 
 		} 	elseif (preg_match("/^[а-яА-Я ]+$/i", $userlogin)){	
 					
 				$en_login = 1;					
 
-												//проверка длины пароля, не меньше 3 символов
+//проверка длины пароля, не меньше 3 символов
 
 		}	elseif (strlen($userpassword) < 3 ){
 
 				$pass_length = 1;
 
-								 				//Отправление данных в БД
+//Отправление данных в БД
 
 				} else 
 
@@ -57,13 +59,16 @@
 
 					$result = mysqli_query($conn, $query);
 
+// Запись в имени и логина в куки
+
 					setcookie("username", $username, time() + 3600);
 					setcookie("userlogin", $userlogin, time() + 3600);
-												//Редирект на главную страницу
+
+//Редирект на главную страницу
 					
 					header('Location: index.php');
 
-												//Разрыв соединение и закрытие кода
+//Разрыв соединение и закрытие кода
 
 					mysqli_close($conn);
 					exit();
@@ -79,16 +84,16 @@
 </head>
 <body>
 
-		<!-- Варп страницы -->
+<!-- Варп страницы -->
 
 	<div id="pagewarp">
 
-		<!-- Блок регистрации  -->
+<!-- Блок регистрации  -->
 
 		<div class="reg_block">
 			<p>Регистрация</p>
 
-		<!-- Форма регистрации -->
+<!-- Форма регистрации -->
 
 			<form method="POST">
 				<div class="main_field">
@@ -193,12 +198,12 @@
 						<input class="reg_button" type="submit" name="reg_button" value="Регистрация">
 					</div>
 
-					<!-- Блок вывода ошибок -->
+<!-- Блок вывода ошибок -->
 
 					<div class="error_chek">
 						<?php
 
-												//Вывод всех выше описанных ошибок в форме
+//Вывод всех выше описанных ошибок в форме
 
 						if ($ei == 1) {
 
@@ -229,7 +234,7 @@
 		</div>
 		</div>
 
-		<!-- Подвал  -->
+<!-- Подвал  -->
 
 		<div class="footer">
 			<div class="footer_text">

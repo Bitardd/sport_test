@@ -9,12 +9,17 @@ html,body {
 	width: 100%;
 	overflow-x:hidden;
 }
+
+/*первая часть страницы*/
+
 #section1{
 	width: 100vw;
 	height: 100vh;
 	background-color: #dcdcdc;
 }
+
 /*шапка*/
+
 header {
 	height: 100px;
 	width: 100%;
@@ -28,20 +33,25 @@ header {
 		height: 100px;
 		overflow: hidden;
 	}
+
 /*лого шапки*/
+
 		.header_logo {
 			height: 80px;
 			width: 80px;
 			margin-top: 10px;
 			float: left;
 		}	
+
 		.header_logo_2 {
 			height: 80px;
 			width: 80px;
 			margin-top: 10px;
 			float: right;
 		}	
+
 /*загаловок шапки*/
+
 		.page_name {
 			text-align: center;
 			line-height: 100px;
@@ -54,6 +64,8 @@ header {
 				font-family: 'M PLUS 1p', sans-serif;
 				font-size: 28px;
 			}
+
+/*Вторая часть шакпи*/
 
 #second_header {
 	height: 400px;
@@ -68,6 +80,8 @@ header {
 			height: 400px;
 			background-color: rgba(0,0,0,.3);
 		}
+
+/*Текст во второй шапке*/
 
 				.desc_login {
 					height: 400px;
@@ -99,6 +113,7 @@ header {
 								font-size: 72px;
 								color: white;
 						}
+
 		.header_line {
 			width: 1px;
 			background-color: white;
@@ -106,6 +121,9 @@ header {
 			float: left;
 			margin-top: 50px;
 		}
+
+/*Блок и форма с авторизацией*/
+
 		.login_form {
 			width: 34%;
 			height: 400px;
@@ -167,23 +185,32 @@ header {
 						color: white;
 						font-family: 'M PLUS 1p', sans-serif;
 					}
+
+/*Футер первой части страницы*/
+
 	.header_footer{
 		height: 100%;
 		width: 100%;
 		text-align: center;
 		margin-top: 6%;
 	}
+
 		.developer_desk {
 			color: gray;
 			font-family: 'M PLUS 1p',sans-serif;
 		}
+
+/*Вторая часть страницы*/
+
 #section2 {
 	width: 100vw;
 	height: 100vh;
 	background-image: url(../img/section2_bg.png);
 	position: relative;
 }
-						
+
+/*Блок с выводом тестов*/
+
 	.content{
 		width: 600px;
 		height: 400px;
@@ -194,6 +221,7 @@ header {
 		top: 0; left: 0; bottom: 0; right: 0;
 		border: 30px solid rgba(192,192,192,.3);
 	}
+
 		.test_block{
 			text-align: center;
 			line-height: 200px;
@@ -201,6 +229,7 @@ header {
 			height: 200px;
 			float: left;
 		}
+
 			.test_block a{
 				display: block;
 				color: white;
@@ -209,39 +238,49 @@ header {
 				font-size: 28px;
 				color: rgba(0,0,0,0);
 			}
+
 			.test_block a:hover{
 				transition: 0.2s;
 				background-color: rgba(0,0,0,.5);
 				color: white;
 			}
+
 			.test_block a:not(:hover){
 				transition: 0.2s;
 				background-color: rgba(0,0,0,0);
 				color: rgba(0,0,0,0);
 			}
-		.sport1{
-			background-image: url(../media/flat-basketball-player-vector-illustration.jpg);
-			background-size: 100%;
-		}
-		.sport2{
-			background-image: url(../img/gymnast_test.png);
-			background-size: 100%;
-		}
-		.sport3{
-			background-image: url(../img/volley_test.jpg);
-			background-size: 100%;
-		}
-		.sport4{
-			background-image: url(../img/skiing_test.png);
-			background-size: 100%;
-		}
-		.sport5{
-			background-image: url(../media/602290260-612x612.jpg);
-			background-size: 100%;
-		}	
-		.sport6{
-			background-color: white;
-		}
+
+			.sport1{
+				background-image: url(../media/flat-basketball-player-vector-illustration.jpg);
+				background-size: 100%;
+			}
+
+			.sport2{
+				background-image: url(../img/gymnast_test.png);
+				background-size: 100%;
+			}
+
+			.sport3{
+				background-image: url(../img/volley_test.jpg);
+				background-size: 100%;
+			}
+
+			.sport4{
+				background-image: url(../img/skiing_test.png);
+				background-size: 100%;
+			}
+
+			.sport5{
+				background-image: url(../media/602290260-612x612.jpg);
+				background-size: 100%;
+			}	
+
+			.sport6{
+				background-color: white;
+			}
+
+/*Блок с формой приветствия*/
 
 .main_field_second{
 	text-align: center;
@@ -254,6 +293,8 @@ header {
 
 	}
 
+/*Текст в контенте для не авторизованных пользователей*/
+
 .logout_content {
 	font-size: 32px;
 	font-family: 'M PLUS 1p', sans-serif;
@@ -261,14 +302,16 @@ header {
 
 }
 	.logout_content p a{
-
 		color: black;
 	}
+
+/*Ошибка при неверном вводе логина и пароля*/
 
 .bad_login {
 	width: 100%;
 	text-align: center;
 }
+
 	.bad_login p {
 		font-family: 'M PLUS 1p', sans-serif;
 		font-size: 14px;

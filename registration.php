@@ -1,24 +1,70 @@
-﻿<?php
-	require_once 'connect.php';
-
-	$con = mysqli_connect($host, $user, $password, $db) or die ("Ошибка ". mysqli_error($con));
+<?php
+	
+	include 'connect.php'; 						//Подключение бд
 
 	if (isset($_POST['reg_button'])){
+												
+												// данные с формы
 
+			$username = $_POST['name'];
+			$usersurname = $_POST['surname'];
+			$userlogin = $_POST['login'];
+			$userpassword = $_POST['password'];
+			$usergroup = $_POST['group'];
 
-		if ((empty($_POST['name'])) or (empty($_POST['surname'])) or (empty($_POST['login'])) or (empty($_POST['password']))){
+												// запрос логина и его проверка на наличие
 
-			$ei = 1;
+			$query = "SELECT * FROM userdata WHERE login='$userlogin'";
+			$result = mysqli_query($conn, $query);
+			$row = mysqli_fetch_array($result);
 
-			} 	elseif (preg_match("/^[а-яА-Я ]+$/i", $_POST['login'])){
+			if ($row['login']){
+
+				$error_login = 1;
+
+												// проверка цифр в имени и фамилии
+
+			}	else{							
+
+			preg_match("/[\d]+/", $username, $er_name);
+			preg_match("/[\d]+/", $usersurname, $er_sname);
+
+												// проверка на пустоту строк
+
+		if ((empty($username)) or (empty($usersurname)) or (empty($userlogin)) or (empty($userpassword))){
+
+				$ei = 1;
+
+												// проверка на наличие рус букв в логине
+
+		} 	elseif (preg_match("/^[а-яА-Я ]+$/i", $userlogin)){	
 					
-					$en_login = 1;
+				$en_login = 1;					
 
-				}	elseif (strlen($_POST['password']) < 5 ){
+												//проверка длины пароля, не меньше 3 символов
 
-					$pass_length = 1;
-				}
+		}	elseif (strlen($userpassword) < 3 ){
+
+				$pass_length = 1;
+
+								 				//Отправление данных в БД
+
+				} else 
+
+					$query = "INSERT INTO userdata (`name`, `surname`, `login`, `password`, `usergroup`) value ('".$username."', '".$usersurname."', '".$userlogin."', '".$userpassword."', '".$usergroup."')";
+
+					$result = mysqli_query($conn, $query);
+
+												//Редирект на главную страницу
+					
+					header('Location: index.php');
+
+												//Разрыв соединение и закрытие кода
+
+					mysqli_close($conn);
+					exit();
 		}
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,10 +74,19 @@
 	<link href="css/reg.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+
+		<!-- Варп страницы -->
+
 	<div id="pagewarp">
+
+		<!-- Блок регистрации  -->
+
 		<div class="reg_block">
 			<p>Регистрация</p>
-			<form method="POST" action="">
+
+		<!-- Форма регистрации -->
+
+			<form method="POST">
 				<div class="main_field">
 					<div class="field">
 						<label for="name">Имя:</label>
@@ -133,19 +188,45 @@
 					<div class="reg_button_block">
 						<input class="reg_button" type="submit" name="reg_button" value="Регистрация">
 					</div>
+
+					<!-- Блок вывода ошибок -->
+
 					<div class="error_chek">
-						<?php if ($ei == 1){
+						<?php
+
+												//Вывод всех выше описанных ошибок в форме
+
+						if ($ei == 1) {
+
 							echo "<span>Не все поля заполнены</span>";
-						} elseif ($en_login == 1) {
-							echo "<span>Некорректный логин</span>";
-						} elseif ($pass_length == 1) {
-							echo "<span>Пароль слишком короткий</span>";
-						} ?>
+
+						}	elseif ($en_login == 1) {
+
+								echo "<span>Некорректный логин</span>";
+
+						} 	elseif ($pass_length == 1) {
+
+								echo "<span>Пароль слишком короткий</span>";
+
+						}	elseif (($er_name[0] > 0) or ($er_sname[0] > 0)) {
+
+								echo "<span>Некорректное Имя или Фамилия</span>";
+								
+						}	elseif ($error_login == 1) {
+
+								echo "<span>Логин уже существует</span>";
+
+						}
+
+						?>
 					</div>
 				</div>
 			</form>
 		</div>
 		</div>
+
+		<!-- Подвал  -->
+
 		<div class="footer">
 			<div class="footer_text">
 			<span>Внимание! Регистрация проиходит для сохранения результата тестов!</span>

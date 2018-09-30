@@ -92,14 +92,15 @@ p{
 
 					.reg_button:hover{
 						transition: 0.2s;
-						border: 1px solid black;
-						color: black;
+						border: 1px solid orange;
+						color: orange;
 					}
 					.reg_button:not(:hover){
 						transition: 0.2s;
 						border: 1px solid gray;
 						color: gray;
 					}
+
 .footer {
 	position: absolute;
 	width: 100%;

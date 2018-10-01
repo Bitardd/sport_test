@@ -186,19 +186,19 @@
 			if ($_COOKIE['userlogin'] != ''){
 				echo '
 				<div class="test_block sport1">
-					<a href="#">Баскетбол</a>
+					<a href="/basket_test/basket.php">Баскетбол</a>
 				</div>
 				<div class="test_block sport2">
-					<a href="#">Гимнастика</a>
+					<a href="/gymnast_test/gymnast.php">Гимнастика</a>
 				</div>
 				<div class="test_block sport3">
-					<a href="#">Волейбол</a>
+					<a href="/volley_test/volley.php">Волейбол</a>
 				</div>
 				<div class="test_block sport4" >
-					<a href="#">Лыжи</a>
+					<a href="/skiing_test/skiing.php">Лыжи</a>
 				</div>
 				<div class="test_block sport5">
-					<a href="#">Атлетика</a>
+					<a href="/athlet_test/athlet.php">Атлетика</a>
 				</div>
 				<div class="test_block sport6">
 					<a href="#">Скоро</a>

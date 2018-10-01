@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+body,html{
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+.disable {
+	position: absolute;
+	z-index: -1;
+}
+.white_layer {
+	background-color: white;
+	width: 100vw;
+	height: 100vh;
+	z-index: 998;
+}
+	.result_block{
+		height: 400px;
+		width: 550px;
+		margin: auto;
+		top: 0; bottom: 0; right: 0; left: 0;
+		position: absolute;
+		z-index: 999;
+		border-radius: 10px;
+		box-shadow: 0 0 10px gray;
+	}
+		.result{
+			width: 275px;
+			height: 400px;
+			float: left;
+			position: relative;
+		}
+
+			.user_result_block {
+				position: absolute;
+				width: 90%;
+				height: 350px;
+				margin: auto;
+				top: 0; bottom: 0; right: 0; left: 0;
+			}
+				.name{
+					text-align: center;
+				}
+					.username {
+						font-family: 'M PLUS 1p', sans-serif;
+						font-size: 36px;
+					}
+
+					.span_text {
+						font-family: 'M PLUS 1p', sans-serif;
+						font-size: 24px;					
+					}
+
+				.user_result_left{
+					text-align: center;
+					width: 50%;
+					float: left;
+					height: 200px;
+					line-height: 70px;
+				}
+					.true_text {
+						font-family: 'M PLUS 1p', sans-serif;
+						font-size: 17px;
+					}
+
+					.true {
+						font-size: 36px;
+						color:green;
+						border-bottom: 2px solid green;
+					}
+
+				.user_result_right{
+					text-align: center;
+					width: 50%;
+					float: right;
+					height: 200px;
+					line-height: 70px;
+				}
+
+					.false{
+						font-size: 36px;
+						color:red;
+						border-bottom: 2px solid red;						
+					}
+
+		.ocenka{
+			width: 275px;
+			height: 400px;
+			float: right;
+			text-align: center;
+			line-height: 400px;
+		}
+			.ocenka span {
+				font-family: 'M PLUS 1p', sans-serif;
+				font-size: 300px;
+			}
+				.two {
+					color: red;
+				}
+
+				.three{
+					color: orange;
+				}
+
+				.four {
+					color: brown;
+				}
+
+				.five {
+					color: green;
+				}
+
+.header {
+	width: 100%;
+	text-align: center;
+	line-height: 140px;
+}
+
+.header span {
+	font-family: 'M PLUS 1p', sans-serif;
+	font-size: 36px;
+	color: gray;
+}
+.result_footer {
+	height: 70px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+	.result_footer a {
+
+		color: gray;
+		font-family: 'M PLUS 1p', sans-serif;
+		font-size: 24px ;
+	}
